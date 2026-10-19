@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Seçkin Elektronik · Trabzon Yetkili Servis</title>
+<meta name="description" content="Philips, Sony, TCL, Thomson, Casper, General Mobile, Korkmaz, Dyson, Segway ve daha fazlası için Trabzon ili ve ilçelerinde yetkili servis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root { --blue:#1476c6; --blue-dark:#0d5a99; --blue-soft:#eaf3fb; --grey:#404040; --ink:#1d2329; --muted:#5f6b76; --line:#e3e8ee; --bg:#fff; --wa:#25d366; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+img { max-width:100%; display:block; }
+a { color:inherit; }
+.wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+h1,h2,h3 { line-height:1.15; margin:0; font-weight:800; }
+.icon { width:22px; height:22px; flex:none; }
+
+.notice { background:#b08a3e; color:#fff; text-align:center; font-size:.85rem; font-weight:700; padding:8px 16px; }
+
+nav { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.95); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+nav .wrap { display:flex; align-items:center; justify-content:space-between; height:64px; gap:16px; }
+nav .logo img { height:38px; width:auto; }
+nav ul { display:flex; gap:22px; list-style:none; margin:0; padding:0; align-items:center; }
+nav ul a { text-decoration:none; font-weight:700; font-size:.92rem; }
+.pill { display:inline-flex; align-items:center; gap:8px; background:var(--blue); color:#fff !important; padding:9px 14px; border-radius:10px; }
+@media (max-width:760px) { nav ul li:not(:last-child) { display:none; } }
+
+.hero { position:relative; color:#fff; background:#0b3f6b; overflow:hidden; }
+.hero-bg { position:absolute; inset:0; background:url(img/dukkan.webp) center/cover no-repeat; opacity:.35; }
+.hero::after { content:""; position:absolute; inset:0; background:linear-gradient(100deg, rgba(9,52,90,.97) 30%, rgba(9,52,90,.55)); }
+.hero .wrap { position:relative; z-index:1; padding-top:72px; padding-bottom:80px; }
+.badge { display:inline-block; background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.25); padding:6px 12px; border-radius:99px; font-size:.82rem; font-weight:700; letter-spacing:.04em; }
+.hero h1 { font-size:clamp(2.2rem,6vw,3.8rem); margin:18px 0 16px; max-width:14em; }
+.hero p { font-size:1.12rem; max-width:34em; opacity:.92; margin:0 0 28px; }
+.btns { display:flex; flex-wrap:wrap; gap:12px; }
+.btn { display:inline-flex; align-items:center; gap:10px; padding:14px 20px; border-radius:12px; font-weight:800; text-decoration:none; }
+.btn.white { background:#fff; color:var(--blue-dark); }
+.btn.wa { background:var(--wa); color:#fff; }
+
+.brands { border-bottom:1px solid var(--line); background:#fafcfe; }
+.brands .wrap { padding-top:26px; padding-bottom:26px; }
+.brands p { margin:0 0 14px; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:700; text-align:center; }
+.brand-list { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; list-style:none; margin:0; padding:0; }
+.brand-list li { border:1px solid var(--line); background:#fff; border-radius:10px; padding:8px 16px; font-weight:800; color:var(--grey); letter-spacing:.03em; }
+
+section { padding:72px 0; }
+.head { max-width:640px; margin-bottom:36px; }
+.eyebrow { color:var(--blue); font-weight:800; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; }
+.head h2 { font-size:clamp(1.8rem,4.4vw,2.5rem); margin-top:8px; }
+.head p { color:var(--muted); font-size:1.05rem; margin:12px 0 0; }
+
+.services { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.svc { border:1px solid var(--line); border-radius:16px; padding:24px; }
+.svc .ic { width:48px; height:48px; border-radius:12px; background:var(--blue-soft); color:var(--blue); display:grid; place-items:center; margin-bottom:14px; }
+.svc h3 { font-size:1.15rem; margin-bottom:6px; }
+.svc p { margin:0; color:var(--muted); }
+@media (max-width:860px) { .services { grid-template-columns:1fr; } }
+
+.steps { background:var(--blue-soft); }
+.step-list { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; counter-reset:s; list-style:none; padding:0; margin:0; }
+.step-list li { background:#fff; border-radius:16px; padding:24px; position:relative; }
+.step-list li::before { counter-increment:s; content:counter(s); display:grid; place-items:center; width:36px; height:36px; border-radius:50%; background:var(--blue); color:#fff; font-weight:800; margin-bottom:12px; }
+.step-list h3 { font-size:1.08rem; margin-bottom:4px; }
+.step-list p { margin:0; color:var(--muted); }
+.form-cta { margin-top:22px; background:#fff; border-radius:16px; padding:24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.form-cta p { margin:0; font-weight:700; }
+@media (max-width:860px) { .step-list { grid-template-columns:1fr; } }
+
+.gallery { display:grid; grid-template-columns:2fr 1fr; grid-template-rows:auto auto; gap:12px; }
+.gallery img { width:100%; height:100%; object-fit:cover; border-radius:14px; }
+.gallery .tall { grid-row:span 2; }
+@media (max-width:760px) { .gallery { grid-template-columns:1fr 1fr; } .gallery .tall { grid-column:span 2; grid-row:auto; } }
+.vision { margin-top:28px; border-left:4px solid var(--blue); padding:6px 0 6px 18px; color:var(--grey); font-size:1.08rem; max-width:46em; }
+
+.contact { display:grid; grid-template-columns:1fr 1.2fr; gap:28px; }
+.info { list-style:none; padding:0; margin:0; }
+.info li { display:flex; gap:14px; padding:14px 0; border-bottom:1px solid var(--line); }
+.info .icon { color:var(--blue); margin-top:2px; }
+.info b { display:block; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.info a { text-decoration:none; font-weight:700; }
+.hours { width:100%; border-collapse:collapse; margin-top:4px; }
+.hours td { padding:2px 0; }
+.hours td:last-child { text-align:right; font-weight:700; }
+.map { width:100%; height:100%; min-height:340px; border:0; border-radius:16px; }
+@media (max-width:760px) { .contact { grid-template-columns:1fr; } }
+
+footer { background:#16202a; color:#a7b3bf; padding:26px 0 96px; font-size:.88rem; }
+footer .wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.float-wa { position:fixed; right:16px; bottom:16px; z-index:20; display:inline-flex; align-items:center; gap:8px; background:var(--wa); color:#fff; text-decoration:none; font-weight:800; padding:13px 18px; border-radius:99px; box-shadow:0 8px 24px rgba(0,0,0,.2); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><path fill="currentColor" d="M22.7 19 13.6 9.9c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4Z"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><path fill="currentColor" d="M21 3H3a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm0 14H3V5h18v12Z"/></symbol>
+  <symbol id="i-van" viewBox="0 0 24 24"><path fill="currentColor" d="M20 8h-3V4H3a2 2 0 0 0-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4ZM6 18.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm13.5-9 2 2.5H17V9.5h2.5ZM18 18.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.3 7 13 7 13s7-7.7 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><path fill="currentColor" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.7 1.5a1.3 1.3 0 1 1 0 2.5 1.3 1.3 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></symbol>
+</svg>
+
+<div class="notice">Tasarım önerisidir — Seçkin Elektronik'in resmi web sitesi değildir.</div>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#"><img src="img/logo.png" width="270" height="79" alt="Seçkin Elektronik"></a>
+    <ul>
+      <li><a href="#hizmetler">Hizmetler</a></li>
+      <li><a href="#servis-talebi">Servis Talebi</a></li>
+      <li><a href="#iletisim">İletişim</a></li>
+      <li><a class="pill" href="tel:+904622292240"><svg class="icon"><use href="#i-phone"/></svg>Ara</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg" role="img" aria-label="Seçkin Elektronik mağazası, Çarşı Mahallesi"></div>
+  <div class="wrap">
+    <span class="badge">Trabzon ili ve ilçelerinde yetkili servis</span>
+    <h1>Cihazınız arızalandıysa, siz arayın biz gelelim.</h1>
+    <p>Philips, Sony, TCL, Casper, Dyson ve daha birçok marka için yetkili servis. TV ve ses sistemlerinde kurulum ve montaj, arızada yerinde servis.</p>
+    <div class="btns">
+      <a class="btn white" href="tel:+904622292240"><svg class="icon"><use href="#i-phone"/></svg>0462 229 22 40</a>
+      <a class="btn wa" href="https://wa.me/905331522661?text=Merhaba%2C%20servis%20kayd%C4%B1%20olu%C5%9Fturmak%20istiyorum." target="_blank" rel="noopener"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp ile servis kaydı</a>
+    </div>
+  </div>
+</header>
+
+<div class="brands">
+  <div class="wrap">
+    <p>Yetkili servisi olduğumuz markalar</p>
+    <ul class="brand-list">
+      <li>PHILIPS</li><li>SONY</li><li>TCL</li><li>THOMSON</li><li>CASPER</li><li>GENERAL MOBILE</li>
+      <li>KORKMAZ</li><li>DYSON</li><li>SEGWAY</li><li>VIOMI</li><li>AWOX</li><li>FOBEM</li>
+    </ul>
+  </div>
+</div>
+
+<section id="hizmetler">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Hizmetlerimiz</div>
+      <h2>Satış sonrası her şey için tek adres.</h2>
+    </div>
+    <div class="services">
+      <div class="svc"><div class="ic"><svg class="icon"><use href="#i-tool"/></svg></div><h3>Yetkili Servis</h3><p>Anlaşmalı markalarımızın ürünleri için Trabzon ili ve ilçelerinde yetkili servis hizmeti.</p></div>
+      <div class="svc"><div class="ic"><svg class="icon"><use href="#i-tv"/></svg></div><h3>TV &amp; Ses Sistemi Kurulumu</h3><p>Televizyon ve ses sistemlerinin kurulum ve montaj işlemleri ekibimiz tarafından yapılır.</p></div>
+      <div class="svc"><div class="ic"><svg class="icon"><use href="#i-van"/></svg></div><h3>Yerinde Servis</h3><p>Ürün arızalarında yerinde servis. Bütün ürün grupları için siz arayın, biz gelelim.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="servis-talebi" class="steps">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Servis Talebi</div>
+      <h2>Servis kaydı 1 dakika.</h2>
+      <p>Form doldurmanıza gerek yok. Telefonla ya da WhatsApp'tan yazın, arkadaşlarımız en kısa sürede size dönüş yapsın.</p>
+    </div>
+    <ol class="step-list">
+      <li><h3>Bize ulaşın</h3><p>Arayın ya da WhatsApp'tan yazın.</p></li>
+      <li><h3>Cihazı tarif edin</h3><p>Marka, model ve arızayı kısaca anlatın; varsa fotoğraf gönderin.</p></li>
+      <li><h3>Size dönelim</h3><p>Kaydınızı oluşturup en kısa sürede size dönüş yapalım.</p></li>
+    </ol>
+    <div class="form-cta">
+      <p>Hazır mesajla hemen servis kaydı oluşturun:</p>
+      <a class="btn wa" href="https://wa.me/905331522661?text=Merhaba%2C%20servis%20kayd%C4%B1%20olu%C5%9Fturmak%20istiyorum.%0AMarka%3A%20%0AModel%3A%20%0AAr%C4%B1za%3A%20%0AAdres%3A%20" target="_blank" rel="noopener"><svg class="icon"><use href="#i-wa"/></svg>WhatsApp'tan yaz</a>
+    </div>
+  </div>
+</section>
+
+<section id="hakkimizda">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Mağazamız</div>
+      <h2>Çarşı'nın ortasında, Alican Sokak'ta.</h2>
+    </div>
+    <div class="gallery">
+      <img class="tall" src="img/ic-1.webp" width="900" height="675" loading="lazy" alt="Seçkin Elektronik mağaza içi, General Mobile ve Philips bölümü">
+      <img src="img/ic-2.webp" width="900" height="675" loading="lazy" alt="Servis kabul bankosu ve yetkili marka logoları">
+      <img src="img/ic-3.webp" width="900" height="675" loading="lazy" alt="Servis bekleme alanı">
+    </div>
+    <p class="vision">“Ana hedefimiz, bölgemizde bulunan diğer markaların yetkili satış ve servis hizmetleri arasında daima iyi bir konumda olmak ve müşterilerimize en iyi hizmeti verebilmektir.”</p>
+  </div>
+</section>
+
+<section id="iletisim" style="background:#fafcfe;border-top:1px solid var(--line)">
+  <div class="wrap contact">
+    <div>
+      <div class="eyebrow">İletişim</div>
+      <h2 style="font-size:1.6rem;margin:8px 0 12px">Seçkin Elektronik Cihazları Tic. ve Servis Hiz. Ltd. Şti.</h2>
+      <ul class="info">
+        <li><svg class="icon"><use href="#i-pin"/></svg><div><b>Adres</b>Çarşı Mahallesi, Alican Sokak No:7<br>Ortahisar / Trabzon</div></li>
+        <li><svg class="icon"><use href="#i-phone"/></svg><div><b>Telefon</b><a href="tel:+904622292240">0462 229 22 40</a> · <a href="tel:+904622305973">0462 230 59 73</a><br><a href="tel:+908502595922">0850 259 59 22</a></div></li>
+        <li><svg class="icon"><use href="#i-wa"/></svg><div><b>WhatsApp</b><a href="https://wa.me/905331522661" target="_blank" rel="noopener">0533 152 26 61</a></div></li>
+        <li><svg class="icon"><use href="#i-mail"/></svg><div><b>E-posta</b><a href="mailto:bilgi@seckinelektronik.com.tr">bilgi@seckinelektronik.com.tr</a></div></li>
+        <li><svg class="icon"><use href="#i-clock"/></svg><div style="flex:1"><b>Çalışma Saatleri</b>
+          <table class="hours"><tr><td>Hafta içi</td><td>09:00 – 18:00</td></tr><tr><td>Cumartesi</td><td>09:00 – 18:00</td></tr><tr><td>Pazar</td><td>Kapalı</td></tr></table></div></li>
+        <li><svg class="icon"><use href="#i-ig"/></svg><div><b>Instagram</b><a href="https://www.instagram.com/seckinelektrnk" target="_blank" rel="noopener">@seckinelektrnk</a></div></li>
+      </ul>
+    </div>
+    <iframe class="map" loading="lazy" title="Seçkin Elektronik konum" src="https://maps.google.com/maps?q=%C3%87ar%C5%9F%C4%B1%20Mahallesi%20Alican%20Sokak%20No%3A7%20Ortahisar%20Trabzon&output=embed"></iframe>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Seçkin Elektronik · Trabzon</span>
+    <span>Trabzon ili ve ilçelerinde yetkili servis</span>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/905331522661?text=Merhaba%2C%20servis%20kayd%C4%B1%20olu%C5%9Fturmak%20istiyorum." target="_blank" rel="noopener"><svg class="icon"><use href="#i-wa"/></svg>Servis kaydı</a>
+</body>
+</html>
